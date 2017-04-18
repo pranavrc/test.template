@@ -4,7 +4,6 @@ version: 2.0.1
 description: |
   Template for a NodeJS main job. Installs the NPM module dependencies and executes
   the test target.
-maintainer: mia.cheung2@gmail.com
 config:
   image: node:6
   steps:
