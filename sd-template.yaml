@@ -1,10 +1,10 @@
 # example.yaml
-name: minz/nodejs_main
+name: pranavrc/nodejs_main
 version: 2.0.1
 description: |
   Template for a NodeJS main job. Installs the NPM module dependencies and executes
   the test target.
-maintainer: mia.cheung2@gmail.com
+maintainer: prp.1111@gmail.com
 config:
   image: node:6
   steps:
