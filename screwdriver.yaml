@@ -1,13 +1,13 @@
 shared:
     image: node:6
 jobs:
-    main:  
+    main:
+        requires: [~pr, ~commit]
         steps:
-            - install: npm install screwdriver-template-main
-            # this is run by the PRs as well
-            - validate: ./node_modules/.bin/template-validate
+            - install: npm install screwdriver-command-validator
+            - validate: ./node_modules/.bin/command-validate -f sd-command.yaml
     publish:
+        requires: [main]
         steps:
-            - install: npm install screwdriver-template-main
-            # publishing also validates
-            - publish: ./node_modules/.bin/template-publish
+            - publish: sd-cmd publish -f sd-command.yaml
+
