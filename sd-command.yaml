@@ -1,0 +1,9 @@
+namespace: foo # Namespace for the command
+name: bar # Command name
+version: 1.0 # Major and Minor version number (patch is automatic)
+description: |
+  Lorem ipsum dolor sit amet.
+maintainer: foo@bar.com # Maintainer of the command
+format: binary # Format the command is in (binary)
+binary:
+    file: ./foobar.sh # Path to script or binary file
