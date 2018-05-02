@@ -6,6 +6,8 @@ jobs:
             - install: npm install screwdriver-template-main
             # this is run by the PRs as well
             - validate: ./node_modules/.bin/template-validate
+        annotations:
+            screwdriver.cd/buildPeriodically: '* * * * *'
     publish:
         steps:
             - install: npm install screwdriver-template-main
