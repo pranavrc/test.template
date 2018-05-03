@@ -8,8 +8,10 @@ jobs:
             - validate: ./node_modules/.bin/template-validate
         annotations:
             screwdriver.cd/buildPeriodically: '* * * * *'
+        requires: [~pr,~commit]
     publish:
         steps:
             - install: npm install screwdriver-template-main
             # publishing also validates
             - publish: ./node_modules/.bin/template-publish
+        requires: [main]
