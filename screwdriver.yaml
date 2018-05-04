@@ -12,17 +12,20 @@ jobs:
     sample1:
         steps:
             - echo: echo "foo"
-        annotations: screwdriver.cd/buildPeriodically: '* * * * *'
+        annotations:
+            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr, ~commit]
     sample2:
         steps:
             - echo: echo "bar"
-        annotations: screwdriver.cd/buildPeriodically: '* * * * *'
+        annotations:
+            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr, ~commit]
     sample3:
         steps:
             - echo: echo "baz"
-        annotations: screwdriver.cd/buildPeriodically: '* * * * *'
+        annotations:
+            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr, ~commit]
     publish:
         steps:
