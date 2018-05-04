@@ -9,12 +9,6 @@ jobs:
         annotations:
             screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr,~commit]
-    sample2:
-        steps:
-            - echo: echo "bar"
-        annotations:
-            screwdriver.cd/buildPeriodically: '* 3 * * *'
-        requires: [~pr, ~commit]
     sample3:
         steps:
             - echo: echo "baz"
