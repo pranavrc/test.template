@@ -37,7 +37,7 @@ jobs:
         steps:
             - echo: echo "baz"
         annotations:
-            screwdriver.cd/buildPeriodically: '5 4 5 Feb *'
+            screwdriver.cd/buildPeriodically: '15 20 7 May *'
         requires: [~pr, ~commit]
     publish:
         steps:
