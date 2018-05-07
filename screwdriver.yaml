@@ -27,6 +27,18 @@ jobs:
         annotations:
             screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr, ~commit]
+    sample7:
+        steps:
+            - echo: echo "baz"
+        annotations:
+            screwdriver.cd/buildPeriodically: '5 4 5 Jan Sun'
+        requires: [~pr, ~commit]
+    sample8:
+        steps:
+            - echo: echo "baz"
+        annotations:
+            screwdriver.cd/buildPeriodically: '5 4 5 Feb *'
+        requires: [~pr, ~commit]
     publish:
         steps:
             - install: npm install screwdriver-template-main
