@@ -13,7 +13,7 @@ jobs:
         steps:
             - echo: echo "baz"
         annotations:
-            screwdriver.cd/buildPeriodically: 'M N O P Q'
+            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr, ~commit]
     sample4:
         steps:
