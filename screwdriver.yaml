@@ -6,26 +6,18 @@ jobs:
             - install: npm install screwdriver-template-main
             # this is run by the PRs as well
             - validate: ./node_modules/.bin/template-validate
-        annotations:
-            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr,~commit]
     sample3:
         steps:
             - echo: echo "baz"
-        annotations:
-            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr, ~commit]
     sample4:
         steps:
             - echo: echo "baz"
-        annotations:
-            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr, ~commit]
     sample6:
         steps:
             - echo: echo "baz"
-        annotations:
-            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [~pr, ~commit]
     sample7:
         steps:
@@ -44,6 +36,4 @@ jobs:
             - install: npm install screwdriver-template-main
             # publishing also validates
             - publish: ./node_modules/.bin/template-publish
-        annotations:
-            screwdriver.cd/buildPeriodically: '* * * * *'
         requires: [main]
